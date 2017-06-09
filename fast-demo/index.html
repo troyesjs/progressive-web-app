@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>troyes.js</title>
+  </head>
+  <body>
+    <div id="app">
+      <style type="text/css">
+        * { box-sizing: border-box; }
+        body { font-size: 16px; font-size-adjust: 0.5; font-family: sans-serif; margin: 0px; line-height: 1.21; }
+        #app { text-align: center; color: rgb(44, 62, 80); margin-top: 60px; }
+        h1 { font-family: cursive; font-size: 40px; line-height: 40px; font-size-adjust: unset; }
+        .wf-active h1 { font-family: Pacifico, cursive; font-size: 36px; }
+        .troyes-imgs { display: flex; }
+        .troyes-image { overflow: hidden; }
+      </style>
+      <h1>TROYES.JS</h1>
+      <h1>Progressive Web App</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br>
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,<br>
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo<br>
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse<br>
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non<br>
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
+      </p>
+      <h1>Web font loading</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br>
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,<br>
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo<br>
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse<br>
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non<br>
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
+      </p>
+      <h1>Image loading</h1>
+      <div class="troyes-imgs">
+        <img class="troyes-image" width="840" height="525" style="background-color: #c69d63;"/>
+        <img class="troyes-image" width="840" height="525" style="background-color: #b29b86;"/>
+      </div>
+    </div>
+    <script src="/dist/build.js"></script>
+    <script>
+       WebFontConfig = {
+        google: {
+          families: ['Pacifico', 'Catamaran']
+        }
+       };
+
+       (function(d) {
+          var wf = d.createElement('script'), s = d.scripts[0];
+          wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+          wf.async = true;
+          s.parentNode.insertBefore(wf, s);
+       })(document);
+    </script>
+  </body>
+</html>
